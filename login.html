@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Card</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: cornflowerblue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh; /* Fills the whole screen height */
+    }
+
+    .card {
+      background-color: #333333; /* Darker gray for better text contrast */
+      overflow: hidden;
+      width: 100%;
+      max-width: 320px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: box-shadow 0.3s ease;
+    }
+
+    /* Floating animation trigger on hover */
+    .card:hover {
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      animation: floatUpDown 1.5s ease-in-out infinite;
+    }
+
+    /* Core logic making the card move up and down */
+    @keyframes floatUpDown {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px); /* Moves up 10px */
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    .product-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .info {
+      padding: 20px;
+    }
+
+    h2 {
+      color: #ffffff;
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .desc {
+      display: block;
+      color: #cccccc;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      margin-bottom: 12px;
+    }
+
+    .price {
+      color: orangered;
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+
+    button {
+      background-color: orangered;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #d84500;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="product-image">
+      <!-- Image URL points directly to your product image design -->
+      <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQsnJI7MkVS7q8w42Cd6BsNE1Py4XO0dNtukwXv8TGbPghheFDKmZqMZx_YrE2UiiM3o3-A2Uay_dvUkxhO1HRZ0QPj3xM_" alt="Product Image">
+    </div>
+    <div class="info">
+      <h2>Casual Sports Sandals</h2>
+      <span class="desc">Lightweight and water-resistant dual-strap slides designed for comfortable daily casual wear.</span>
+      <h4 class="price">$29.99</h4>
+      <button type="button">Buy Now</button>
+    </div>
+  </div>
+
+</body>
+</html>
